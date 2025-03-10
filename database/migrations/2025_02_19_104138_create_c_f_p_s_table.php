@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('c_f_p_s', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('name');
             $table->string('phone');
             $table->string('email');
