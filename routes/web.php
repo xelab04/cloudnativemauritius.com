@@ -21,4 +21,6 @@ Route::withoutSession()->group(function () {
     Route::get('/p/{post:slug}', [PostController::class, 'show'])->name('post.show');
 
     Route::get('/{page:slug}', [PageController::class, 'show'])->name('page.show');
+
+    Route::get('/api/meetups', [EventController::class, 'all'])->name('api.meetups');
 });

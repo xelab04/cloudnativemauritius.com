@@ -16,4 +16,23 @@ class EventController extends Controller
 
         return view('index', compact('events'));
     }
+
+    public function all()
+    {
+        $events = Event::all();
+
+        $formattedData = $events->map(function ($item) {
+            return [
+                'community' => 'cnmu',
+                'title' => $item->title,
+                'url' => $item->cncf_url,
+                'type' => 'meetup',
+                'location' => $item->location,
+                'abstract' => $item->note,
+                'date' => $item->start_date->format('Y-m-d'),
+            ];
+        });
+
+        return response()->json($formattedData);
+    }
 }
