@@ -23,7 +23,7 @@ class EventController extends Controller
 
         $formattedData = $events->map(function ($item) {
             return [
-                'community' => 'cnmu',
+                'community' => 'cloudnativemu',
                 'title' => $item->title,
                 'url' => $item->cncf_url,
                 'type' => 'meetup',
