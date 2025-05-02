@@ -24,6 +24,7 @@ class EventController extends Controller
         $formattedData = $events->map(function ($item) {
             return [
                 'community' => 'cloudnativemu',
+                'id' => $item->id,
                 'title' => $item->title,
                 'url' => $item->cncf_url,
                 'type' => 'meetup',
