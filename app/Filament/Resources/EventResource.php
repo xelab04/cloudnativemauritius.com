@@ -63,7 +63,10 @@ class EventResource extends Resource
             ->columns([
                 TextColumn::make('title')
                     ->label('Title'),
-                TextColumn::make('Type')
+                TextColumn::make('start_date')
+                    ->label('Date')
+                    ->sortable(),
+                TextColumn::make('type')
                     ->label('Event Type'),
             ])
             ->filters([
