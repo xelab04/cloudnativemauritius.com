@@ -76,7 +76,7 @@
       <a href="{{ route('cfps.create') }}"
         class="px-5 py-1.5 bg-gray-800 text-slate-100 rounded-md text-xs font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">CFP</a>
       <a href="https://t.me/+E_G1XIVXTWMzYjU0" target="_blank">
-        <svg class="h-7 fill-background bg-gray-800 hover:fill-accent hover:outline hover:outline-800 transition ease-in-out duration-300" role="img"
+        <svg class="h-7 fill-gray-800 hover:fill-accent hover:outline hover:outline-800 rounded-full transition ease-in-out duration-300" role="img"
           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <title>Telegram</title>
           <path
