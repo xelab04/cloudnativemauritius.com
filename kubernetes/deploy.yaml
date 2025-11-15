@@ -23,9 +23,9 @@ spec:
           - containerPort: 8000
           envFrom:
             - configMapRef:
-              name: cnmu-config
+                name: cnmu-config
             - secretRef:
-              name: cnmu-secret
+                name: cnmu-secret
           resources:
             requests:
               cpu: 25m
