@@ -1,12 +1,12 @@
 apiVersion: v1
 data:
   APP_NAME: "CloudNativeMU"
-  APP_ENV: "local"
+  APP_ENV: "production"
   # APP_KEY:
-  APP_DEBUG: "true"
+  APP_DEBUG: "false"
   APP_TIMEZONE: "UTC"
-  APP_URL: "https://cloudnativemauritius.com"
-  ASSET_URL: "https://cloudnativemauritius.com"
+  APP_URL: "https://cloudnativemauritius.alexbissessur.dev"
+  ASSET_URL: "https://cloudnativemauritius.alexbissessur.dev"
   URL: "0.0.0.0"
 
   APP_LOCALE: "en"
