@@ -18,6 +18,7 @@ spec:
     spec:
       containers:
         - image: xelab04/cloudnativemu:1.0
+          imagePullPolicy: Always
           name: cloudnativemu
           ports:
           - containerPort: 8000
