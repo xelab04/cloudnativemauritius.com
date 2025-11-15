@@ -17,7 +17,7 @@ spec:
         app: cloudnativemu
     spec:
       containers:
-        - image: alexb04/cloudnativemu
+        - image: xelab04/cloudnativemu:1.0
           name: cloudnativemu
           ports:
           - containerPort: 8000
