@@ -12,10 +12,10 @@ RUN npm ci
 
 RUN npm run build
 
-FROM docker.io/dunglas/frankenphp:1.4.4-php8.3.17-alpine AS frankenphp
+FROM docker.io/dunglas/frankenphp:1.9-builder-php8.4-alpine AS frankenphp
 
-ARG MYUSER=appuser
-ARG MYUID=1042
+# ARG MYUSER=appuser
+# ARG MYUID=1042
 
 WORKDIR /app
 
@@ -50,13 +50,13 @@ USER 0
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Create a non-root user
-ARG MYUSER=appuser
-ARG MYUID=1042
+# ARG MYUSER=appuser
+# ARG MYUID=1042
 
-RUN echo 'Adding user' \
-    && adduser -D -u ${MYUID} ${MYUSER}; \
-    setcap -r /usr/local/bin/frankenphp; \
-    chown -R ${MYUSER}:${MYUSER} /data/caddy /config/caddy /app
+# RUN echo 'Adding user' \
+#     && adduser -D -u ${MYUID} ${MYUSER}; \
+#     setcap -r /usr/local/bin/frankenphp; \
+#     chown -R ${MYUSER}:${MYUSER} /data/caddy /config/caddy /app
 
 RUN wget -qO /usr/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.5/dumb-init_1.2.5_$(uname -m) && \
     chmod +x /usr/bin/dumb-init
