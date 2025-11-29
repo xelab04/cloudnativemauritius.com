@@ -31,5 +31,13 @@ spec:
             requests:
               cpu: 25m
               memory: 200Mi
+          volumeMounts:
+            - name: cnmu-data
+              mountPath: /app/public/storage
+
+      volumes:
+        - name: cnmu-data
+          persistentVolumeClaim:
+            claimName: cnmu-data
 
       restartPolicy: Always
