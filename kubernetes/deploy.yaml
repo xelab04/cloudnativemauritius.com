@@ -29,8 +29,8 @@ spec:
                 name: cnmu-secret
           resources:
             requests:
-              cpu: 25m
-              memory: 200Mi
+              cpu: 50m
+              memory: 350Mi
           volumeMounts:
             - name: cnmu-data
               mountPath: /app/public/storage
