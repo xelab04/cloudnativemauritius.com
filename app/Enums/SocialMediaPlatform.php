@@ -10,6 +10,7 @@ enum SocialMediaPlatform: string
 
     // Well you know, twitter...
     case X = 'x';
+    case MASTODON = 'mastodon';
     case GITHUB = 'github';
     case LINKEDIN = 'linkedin';
     case FACEBOOK = 'facebook';
