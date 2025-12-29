@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cloudnativemu
+  name: cloudnativemu
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudnativemu
+  template:
+    metadata:
+      labels:
+        app: cloudnativemu
+    spec:
+      containers:
+        - image: xelab04/cloudnativemu:1.0
+          imagePullPolicy: Always
+          name: cloudnativemu
+          ports:
+          - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: cnmu-config
+            - secretRef:
+                name: cnmu-secret
+          resources:
+            requests:
+              cpu: 50m
+              memory: 350Mi
+          volumeMounts:
+            - name: cnmu-data
+              mountPath: /app/public/storage
+
+      volumes:
+        - name: cnmu-data
+          persistentVolumeClaim:
+            claimName: cnmu-data
+
+      restartPolicy: Always

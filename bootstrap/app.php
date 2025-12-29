@@ -19,6 +19,8 @@ return Application::configure(basePath: dirname(__DIR__))
             // this middleware prevents a route to be cached
             'cache.prevent' => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
         ]);
+
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
