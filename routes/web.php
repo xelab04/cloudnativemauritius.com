@@ -19,7 +19,7 @@ Route::withoutSession()->group(function () {
 
     Route::get('/blog', BlogController::class)->name('blog');
 
-    Route::get('/contributions', [ContributionController::class, 'show'])->name('contribution.show');
+    Route::get('/contributions', [ContributionController::class, 'show'])->name('contributions');
 
     Route::get('/p/{post:slug}', [PostController::class, 'show'])->name('post.show');
 

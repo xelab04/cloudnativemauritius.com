@@ -38,6 +38,8 @@
             class="px-10 py-3 text-center bg-gray-600 text-slate-100 rounded-md text-sm font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">CNCF</a>
           <a href="{{ route('blog') }}"
             class="px-10 py-3 text-center bg-gray-600 text-slate-100 rounded-md text-sm font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">Blog</a>
+          <a href="{{ route('contributions') }}"
+            class="px-10 py-3 text-center bg-gray-600 text-slate-100 rounded-md text-sm font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">Contributions</a>
           <a href="{{ route('cfps.create') }}"
             class="px-10 py-3 text-center bg-gray-600 text-slate-100 rounded-md text-sm font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">CFP</a>
           <a href="https://t.me/+E_G1XIVXTWMzYjU0" target="_blank" class="flex justify-center">
@@ -73,6 +75,8 @@
         class="px-5 py-1.5 bg-gray-800 text-slate-100 rounded-md text-xs font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">CNCF</a>
       <a href="{{ route('blog') }}"
         class="px-5 py-1.5 bg-gray-800 text-slate-100 rounded-md text-xs font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">Blog</a>
+      <a href="{{ route('contributions') }}"
+        class="px-5 py-1.5 bg-gray-800 text-slate-100 rounded-md text-xs font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">Contributions</a>
       <a href="{{ route('cfps.create') }}"
         class="px-5 py-1.5 bg-gray-800 text-slate-100 rounded-md text-xs font-semibold uppercase hover:bg-accent hover:outline hover:outline-gray-800 transition ease-in-out duration-300">CFP</a>
       <a href="https://t.me/+E_G1XIVXTWMzYjU0" target="_blank">
