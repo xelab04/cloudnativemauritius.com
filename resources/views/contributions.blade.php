@@ -8,32 +8,35 @@
     Cloud Native Contributions</h2>
 
   <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-    @if($projects->count())
-        <h3 class="flex items-center text-l md:text-2xl text-gray-800 font-bold uppercase mt-8 md:mt-10">
-            Projects</h3>
-        <br>
-        @foreach($projects as $project)
-            <x-contributions.card :contribution="$project" />
-        @endforeach
-    @endif
+    <div>
+        @if($projects->count())
+            <h3 class="flex items-center text-xl md:text-2xl text-gray-800 font-bold uppercase mt-2 md:mt-4">
+                Projects</h3>
+            @foreach($projects as $project)
+                <x-contributions.card :contribution="$project" />
+            @endforeach
+        @endif
+    </div>
 
-    @if($prs->count())
-        <h3 class="flex items-center text-l md:text-2xl text-gray-800 font-bold uppercase mt-8 md:mt-10">
-            Pull/Merge Requests</h3>
-        <br>
-        @foreach($prs as $pr)
-            <x-contributions.card :contribution="$pr" />
-        @endforeach
-    @endif
+    <div>
+        @if($prs->count())
+            <h3 class="flex items-center text-xl md:text-2xl text-gray-800 font-bold uppercase mt-2 md:mt-4">
+                Pull/Merge Requests</h3>
+            @foreach($prs as $pr)
+                <x-contributions.card :contribution="$pr" />
+            @endforeach
+        @endif
+    </div>
 
-    @if($issues->count())
-        <h3 class="flex items-center text-l md:text-2xl text-gray-800 font-bold uppercase mt-8 md:mt-10">
-            Issues</h3>
-        <br>
-        @foreach($issues as $issue)
-            <x-contributions.card :contribution="$issue" />
-        @endforeach
-    @endif
+    <div>
+        @if($issues->count())
+            <h3 class="flex items-center text-xl md:text-2xl text-gray-800 font-bold uppercase mt-2 md:mt-4">
+                Issues</h3>
+            @foreach($issues as $issue)
+                <x-contributions.card :contribution="$issue" />
+            @endforeach
+        @endif
+    </div>
 
   </div>
 </section>
