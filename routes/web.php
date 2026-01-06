@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CFPController;
+use App\Http\Controllers\ContributionController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
@@ -17,6 +18,8 @@ Route::withoutSession()->group(function () {
     })->name('cfps.completed');
 
     Route::get('/blog', BlogController::class)->name('blog');
+
+    Route::get('/contributions', [ContributionController::class, 'show'])->name('contribution.show');
 
     Route::get('/p/{post:slug}', [PostController::class, 'show'])->name('post.show');
 
