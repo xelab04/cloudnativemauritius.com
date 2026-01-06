@@ -11,9 +11,9 @@ class ContributionController extends Controller
     {
         $contributions = Contribution::all();
 
-        $projects = Contribution::where('type', 'project')->get();
-        $prs = Contribution::where('type', 'pr')->get();
-        $issues = Contribution::where('type', 'issue')->get();
+        $projects = Contribution::where('type', 'project')->get()->sortByDesc('updated_at');
+        $prs = Contribution::where('type', 'pr')->get()->sortByDesc('updated_at');
+        $issues = Contribution::where('type', 'issue')->get()->sortByDesc('updated_at');
 
         return view('contributions', compact('projects', 'prs', 'issues'));
     }
