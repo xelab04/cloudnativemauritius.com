@@ -7,36 +7,40 @@
           flex items-center text-xl md:text-3xl text-gray-800 font-bold uppercase mb-6 mt-8 md:mt-10">
     Cloud Native Contributions</h2>
 
-  <div class="grid md:grid-cols-2 gap-6 md:gap-8">
-    <div>
-        @if($projects->count())
-            <h3 class="flex items-center text-xl md:text-2xl text-gray-800 font-bold uppercase mt-2 md:mt-4">
-                Projects</h3>
-            @foreach($projects as $project)
-                <x-contributions.card :contribution="$project" />
-            @endforeach
-        @endif
-    </div>
+  <div class="flex flex-col gap-12">
 
-    <div>
-        @if($prs->count())
-            <h3 class="flex items-center text-xl md:text-2xl text-gray-800 font-bold uppercase mt-2 md:mt-4">
-                Pull/Merge Requests</h3>
-            @foreach($prs as $pr)
-                <x-contributions.card :contribution="$pr" />
-            @endforeach
-        @endif
-    </div>
+    @if($projects->count())
+        <div class="pb-8">
+            <h3 class="text-xl md:text-2xl text-gray-800 font-bold uppercase mb-4">Projects</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                @foreach($projects as $project)
+                    <x-contributions.card :contribution="$project" />
+                @endforeach
+            </div>
+        </div>
+    @endif
 
-    <div>
-        @if($issues->count())
-            <h3 class="flex items-center text-xl md:text-2xl text-gray-800 font-bold uppercase mt-2 md:mt-4">
-                Issues</h3>
-            @foreach($issues as $issue)
-                <x-contributions.card :contribution="$issue" />
-            @endforeach
-        @endif
-    </div>
+    @if($prs->count())
+        <div class="pb-8">
+            <h3 class="text-xl md:text-2xl text-gray-800 font-bold uppercase mb-4">Pull/Merge Requests</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                @foreach($prs as $pr)
+                    <x-contributions.card :contribution="$pr" />
+                @endforeach
+            </div>
+        </div>
+    @endif
+
+    @if($issues->count())
+        <div class="">
+            <h3 class="text-xl md:text-2xl text-gray-800 font-bold uppercase mb-4">Issues</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                @foreach($issues as $issue)
+                    <x-contributions.card :contribution="$issue" />
+                @endforeach
+            </div>
+        </div>
+    @endif
 
   </div>
 </section>
