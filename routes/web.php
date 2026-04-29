@@ -19,6 +19,8 @@ Route::withoutSession()->group(function () {
 
     Route::get('/blog', BlogController::class)->name('blog');
 
+    Route::permanentRedirect('/cncf', 'https://community.cncf.io/cloud-native-mauritius/')->name('cncf');
+
     Route::get('/contributions', [ContributionController::class, 'show'])->name('contributions');
 
     Route::get('/p/{post:slug}', [PostController::class, 'show'])->name('post.show');
@@ -26,6 +28,4 @@ Route::withoutSession()->group(function () {
     Route::get('/{page:slug}', [PageController::class, 'show'])->name('page.show');
 
     Route::get('/api/meetups', [EventController::class, 'all'])->name('api.meetups');
-
-    Route::redirect('/cncf', 'https://community.cncf.io/cloud-native-mauritius/')->name('cncf');
 });
