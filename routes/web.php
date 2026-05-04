@@ -19,7 +19,7 @@ Route::withoutSession()->group(function () {
 
     Route::get('/blog', BlogController::class)->name('blog');
 
-    Route::permanentRedirect('/cncf', 'https://community.cncf.io/cloud-native-mauritius/')->name('cncf');
+    Route::permanentRedirect('/cncf', 'https://ocgroups.dev/cncf/group/58jha3y')->name('cncf');
 
     Route::get('/contributions', [ContributionController::class, 'show'])->name('contributions');
 
